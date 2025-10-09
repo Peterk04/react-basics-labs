@@ -39,30 +39,18 @@ function App() {
           description={task.description}
           deadline={task.deadline}
           key={task.id}
-          priority={task.priority}
           done={task.done}
           markDone={() => doneHandler(index)}
-          deleteTask = {() => deleteHandler(index)}
+          deleteTask={() => deleteHandler(index)}
         />
       ))}
+      <AddTaskForm />
     </div>
+
+
   );
 
-  <div className="container">
-  <h1>Tasky</h1>
-  {taskState.tasks.map((task, index) => (              
-    <Task 
-      title={task.title}
-      description={task.description}
-      deadline={task.deadline}
-      key={task.id}
-      done={task.done}
-      markDone={() => doneHandler(index)}
-      deleteTask = {() => deleteHandler(index)}
-    />
-  ))}
-  <AddTaskForm />
-</div>
+
 
 
 }
